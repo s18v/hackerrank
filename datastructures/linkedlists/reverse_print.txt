@@ -1,0 +1,33 @@
+/*
+  Insert Node at the end of a linked list 
+  head pointer input could be NULL as well for empty list
+  Node is defined as 
+  class Node {
+     int data;
+     Node next;
+  }
+*/
+    // This is a "method-only" submission. 
+    // You only need to complete this method. 
+
+void ReversePrint(Node head) {
+    if (head == null) {
+        return;
+    }
+    /*
+    * Stack can also be used in place of String but it occupies O(n) space.. 
+    */
+    StringBuilder sb = new StringBuilder("");
+    Node current = head;
+    // Adding the contents of the linked list to StringBuilder 
+    while (current != null) {
+        sb.append(current.data);
+        current = current.next;
+    }
+    
+    // Reverse printing the string
+    String listContents = sb.toString();
+    for (int i = listContents.length() - 1; i >= 0; i--) {
+        System.out.println(listContents.charAt(i));
+    }
+}
