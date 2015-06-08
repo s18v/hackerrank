@@ -14,9 +14,7 @@ void ReversePrint(Node head) {
     if (head == null) {
         return;
     }
-    /*
-    * Stack can also be used in place of String but it occupies O(n) space.. 
-    */
+    // Stack can also be used in place of String, but it occupies O(n) space.. 
     StringBuilder sb = new StringBuilder("");
     Node current = head;
     // Adding the contents of the linked list to StringBuilder 
