@@ -1,0 +1,24 @@
+/*
+  Insert Node at the end of a linked list 
+  head pointer input could be NULL as well for empty list
+  Node is defined as 
+  class Node {
+     int data;
+     Node next;
+  }
+*/
+int CompareLists(Node headA, Node headB) {
+    if(headA == null || headB == null) {
+        return 0;
+    }
+    Node currA = headA;
+    Node currB = headB;
+    while (currA != null && currB != null) {
+        if (currA.data != currB.data) {
+            return 0;
+        }
+        currA = currA.next;
+        currB = currB.next;
+    }
+    return 1;
+}
