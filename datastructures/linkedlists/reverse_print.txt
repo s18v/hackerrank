@@ -14,18 +14,17 @@ void ReversePrint(Node head) {
     if (head == null) {
         return;
     }
-    // Stack can also be used in place of String, but it occupies O(n) space.. 
-    StringBuilder sb = new StringBuilder("");
+    // Stack can also be used in place of ArrayList, but it occupies O(n) space.. 
+    ArrayList<Integer> list = new ArrayList<Integer>();
     Node current = head;
-    // Adding the contents of the linked list to StringBuilder 
+    // Adding the contents of the linked list to ArrayList 
     while (current != null) {
-        sb.append(current.data);
+        list.add(current.data);
         current = current.next;
     }
     
-    // Reverse printing the string
-    String listContents = sb.toString();
-    for (int i = listContents.length() - 1; i >= 0; i--) {
-        System.out.println(listContents.charAt(i));
+    // Reverse printing data from the ArrayList
+    for (int i = list.size() - 1; i >= 0; i--) {
+        System.out.println(list.get(i));
     }
 }
